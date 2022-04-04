@@ -1,9 +1,9 @@
 ---
-title: Something
+title: Something 01
 description:
     This is something important
 
-    And this is a second paragraph of the description
+    And this is a second parsagraph of the description
 date: 04-04-2022
 ---
 
