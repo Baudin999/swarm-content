@@ -5,7 +5,7 @@ description: The life of the big bad wolf
 date: 27-03-2022
 tags:
     - wolfs
-    - feelings
+image: ./wolf.jpg
 ---
 
 # Who's afraid of the big bad wolf!
