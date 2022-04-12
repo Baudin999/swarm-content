@@ -31,8 +31,46 @@ with the following attributes in mind:
 First thing to decide is how to work with the content. I want everyone to remain owner of their content.
 Luckaly I did not have to think hard but we already have things like GitHub and GitLab which can do this job.
 
+Within `swarm` you can pull content from multiple repo's and merge them into one output repo:
+
+![swarm-content-001](./swarm_001.png)
+
+I decided to use the git standard cli tooling and call that from a nodejs application:
+
 ```js
-function getContent() {
-    console.log('Getting the content')
+import cmd from 'node-cmd';
+
+function cloneRepo(contentDir, source) {
+    let tempDir = `....a temp dir...`;
+    let cloneDir = `....a temp dir...`;
+    return new Promise((resolve, reject) => {
+            cmd.run(`cd ${cloneDir} && git clone ${source}`, () => {
+                fsExtra.copy(tempDir, contentDir, () => {
+                    console.log(`Successfully cloned ${source} to ${contentDir}`);
+                resolve();
+            });
+        });
+    });
 }
+```
+
+All the parameters are supplied either by the directory in which the tool is used or by adding them
+to the `swarm.config.json`.
+
+
+## Getting the meta-data
+
+The meta-data is pulled form the content itself. This can be done through either the `info.json` files in the 
+content directory or form the front-matter info in the actual blogpost. For example, this post has the following 
+front-matter and no `info.json`:
+
+```yml
+author: Carlos Kelkboom
+description: 
+    Writing a blog engine is something I've always wanted to 
+    do. In this blog-post I will go over the ideas I've 
+    managed to put into this new engine called 'swarm'.
+tags: 
+    - Craftsmanship
+date: 12-04-2022
 ```
