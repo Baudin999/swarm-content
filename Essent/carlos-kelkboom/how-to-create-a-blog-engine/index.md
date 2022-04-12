@@ -1,5 +1,6 @@
 ---
 author: Carlos Kelkboom
+title: How to write a blog engine
 description: 
     Writing a blog engine is something I've always wanted to 
     do. In this blog-post I will go over the ideas I've 
@@ -74,3 +75,16 @@ tags:
     - Craftsmanship
 date: 12-04-2022
 ```
+
+This is some math:
+
+$$\begin{array}{c}
+
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
+= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+
+\nabla \cdot \vec{\mathbf{B}} & = 0
+
+\end{array}$$
