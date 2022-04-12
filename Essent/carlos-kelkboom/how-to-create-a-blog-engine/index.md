@@ -26,3 +26,13 @@ with the following attributes in mind:
  * Hosted with near $0 costs.
  * Lean against edge-computing
  * Have a dark theme to [save energy](https://www.howtogeek.com/407860/heres-when-a-dark-theme-can-save-battery-power/).
+
+
+First thing to decide is how to work with the content. I want everyone to remain owner of their content.
+Luckaly I did not have to think hard but we already have things like GitHub and GitLab which can do this job.
+
+```js
+function getContent() {
+    console.log('Getting the content')
+}
+```
