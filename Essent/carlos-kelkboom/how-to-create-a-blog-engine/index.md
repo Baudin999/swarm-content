@@ -7,7 +7,8 @@ description:
     managed to put into this new engine called 'swarm'.
 tags: 
     - Craftsmanship
-date: 12-04-2022
+date: 12-04-2055
+image: ./cover-image.jpg
 ---
 
 # How to write a blog engine
@@ -88,3 +89,4 @@ $$\begin{array}{c}
 \nabla \cdot \vec{\mathbf{B}} & = 0
 
 \end{array}$$
+
